@@ -23,6 +23,7 @@ import {
 import { motion, AnimatePresence } from "motion/react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import initialProjects from "../projects.json";
 
 // --- Types ---
 
@@ -857,24 +858,32 @@ const AdminPanel = ({
                       multiple
                       onChange={async (e) => {
                         if (e.target.files && e.target.files.length > 0) {
-                          const formData = new FormData();
-                          Array.from(e.target.files).forEach(file => {
-                            formData.append('images', file);
-                          });
+                          const files = Array.from(e.target.files);
                           try {
+                            const formData = new FormData();
+                            files.forEach(file => {
+                              formData.append('images', file);
+                            });
                             const res = await fetch('/api/upload', { method: 'POST', body: formData });
-                            const data = await res.json();
+                            const text = await res.text();
+                            if (!res.ok || text.trim().startsWith("<")) {
+                              throw new Error("API upload not available");
+                            }
+                            const data = JSON.parse(text);
                             const imageUrls = data.urls;
-                            
-                            // Add to detailImages array
                             const currentDetailImages = editingProject.detailImages || [];
                             setEditingProject({
                               ...editingProject,
                               detailImages: [...currentDetailImages, ...imageUrls]
                             });
-                            
                           } catch (err) {
-                            console.error("Failed to upload detail images:", err);
+                            console.warn("Falling back to local object URLs for detail images:", err);
+                            const localUrls = files.map(file => URL.createObjectURL(file));
+                            const currentDetailImages = editingProject.detailImages || [];
+                            setEditingProject({
+                              ...editingProject,
+                              detailImages: [...currentDetailImages, ...localUrls]
+                            });
                           }
                         }
                       }}
@@ -960,17 +969,14 @@ export default function App() {
         setLoading(false);
         return;
       }
-      const res = await fetch("/projects.json");
-      const data = await res.json();
-      // Map images to the correct format if they are strings
-      const formattedData = data.map((p: any) => ({
+      const formattedData = (initialProjects as any[]).map((p: any) => ({
         ...p,
         images: Array.isArray(p.images) ? p.images : [p.image],
         detailImages: Array.isArray(p.detailImages) ? p.detailImages : []
       }));
       setProjects(formattedData);
     } catch (err) {
-      console.error("Failed to fetch projects:", err);
+      console.error("Failed to load projects:", err);
     } finally {
       setLoading(false);
     }

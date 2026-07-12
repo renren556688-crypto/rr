@@ -1,0 +1,149 @@
+[
+  {
+    "id": "3",
+    "title": "钓鱼台·美高梅官网改版",
+    "category": "品牌官网 / 响应式设计",
+    "images": [
+      "https://i.ibb.co/FLLbH416/568.png"
+    ],
+    "detailImages": [
+      "https://i.ibb.co/MDJkHqYn/image.jpg",
+      "https://i.ibb.co/Cp2bfCL1/image.jpg",
+      "https://i.ibb.co/jP6BLMCq/image.jpg",
+      "https://i.ibb.co/FLM709js/image.jpg",
+      "https://i.ibb.co/Fd4tmS1/image.jpg"
+    ],
+    "description": "高端酒店 brand 数字化重塑，通过极简主义设计传达 brand 奢华调性。",
+    "details": "### 项目概述\n\n本项目为钓鱼台·美高梅酒店集团官网全新改版设计。我们致力于在数字化渠道中传递该品牌的奢华调性与尊贵体验。全案由全套高质量UI页面构成，包括集团首页、品牌故事、美食汇、酒店及度假村、餐厅酒吧详情页等模块。\n\n### 设计理念\n\n- **奢华视觉传递**：依托大留白与优雅奢华的卡片式构图，精准传达美高梅品牌基因。\n- **精致色彩搭配**：根据不同品牌 and 场景定制高品质氛围色彩方案，提升用户情感化联结。\n- **响应式极致体验**：全端栅格系统化适配，保证在任何设备上都拥有头等舱级的浏览感受。",
+    "tags": [
+      "Figma",
+      "Web",
+      "Luxury",
+      "品牌官网"
+    ],
+    "layout": "single"
+  },
+  {
+    "id": "2",
+    "title": "安瑞科数据大屏",
+    "category": "数据可视化 / 智能交互大屏",
+    "images": [
+      "https://i.ibb.co/pqfTsVq/image.png"
+    ],
+    "detailImages": [
+      "https://i.ibb.co/pqfTsVq/image.png",
+      "https://i.ibb.co/5xsQSspp/2-1x.png",
+      "https://i.ibb.co/FL5JM4Xw/5-1x.png",
+      "https://i.ibb.co/YF18bfmf/6-1x.png",
+      "https://i.ibb.co/RTNGBDtM/7-1x.png",
+      "https://i.ibb.co/qYKjKZ13/9-1x.png"
+    ],
+    "description": "多模态交互数据大屏，集成实时数据监控、情感化视觉反馈与沉浸式图表看板体验。",
+    "details": "### 项目概述\n\n本项目为新一代**多模态 AI 数据大屏**全案设计。旨在打破传统人机交互冰冷的冰山感，通过富有生命力的视觉反馈与情感化图表，为用户提供有温度的智能监控与业务协助体验。\n\n### 设计亮点\n\n- **情感化视觉设计**：通过细腻的动效、呼吸灯光及多维交互状态，让大屏具备情绪感知与亲和力。\n- **多模态无缝切换**：完美融合实时数据流、视觉识别、快捷指令卡片与沉浸式看板。\n- **高清切图与规范输出**：所有界面均采用 2X 高清规范输出，完美还原细腻的暗夜科技美学与玻璃拟态效果。",
+    "tags": [
+      "Figma",
+      "AI 交互",
+      "数据可视化",
+      "大屏设计"
+    ],
+    "layout": "single"
+  },
+  {
+    "id": "1",
+    "title": "金风科技智慧能源与零碳平台",
+    "category": "打造智慧能源与零碳园区管理系统",
+    "images": [
+      "https://i.ibb.co/mrT0ZJRh/image.png"
+    ],
+    "detailImages": [
+      "https://i.ibb.co/vxzPztRL/2x.png",
+      "https://i.ibb.co/hx3fCxvD/2x.png",
+      "https://i.ibb.co/4nRsq8nb/1-2x.png",
+      "https://i.ibb.co/xSzFns7t/1-2x.png",
+      "https://i.ibb.co/nsvbZnJ2/2x.png"
+    ],
+    "description": "为全球领先的新能源企业金风科技打造的智慧能源与零碳园区管理系统，包含风电装备运维与多维零碳数据可视化。",
+    "details": "### 项目概述\n\n本项目为**金风科技智慧能源与零碳平台**的设计改版。作为全球领先的风电与绿色能源解决方案提供商，金风科技需要一套兼具工业级严谨度与未来感视觉体验的数字化监控管理平台。\n\n本案涵盖了**智能监控首页**、**金风装备监控**、**金风零碳指标**、**吉族录业务管理**等多个核心数字化看板，完美适配大屏监控、桌面端系统等多终端场景。\n\n### 设计理念\n\n- **数字孪生与工业美学**：采用契合新能源行业的深邃暗色背景，搭配极光绿、零碳蓝与亮橙色等高对比度科技色彩，重点突出风电装备运行状态。\n- **2X 高清像素完美适配**：设计稿采用全矢量与高分辨率高清切图输出，保证在各类大屏及 Retina 显示器上拥有无与伦比的高清表现。\n- **高阶动效与状态引导**：针对产品选中、装备晃动等微交互设计了流畅的反馈动效，提升工业软件的易用性与操作直观性。",
+    "tags": [
+      "Figma",
+      "B端系统",
+      "小程序",
+      "智慧能源"
+    ]
+  },
+  {
+    "id": "5",
+    "title": "祎泰健康管理平台",
+    "category": "医疗健康 / 电子病历与院内协同",
+    "images": [
+      "https://i.ibb.co/zTxRfkg6/image.png"
+    ],
+    "detailImages": [
+      "https://i.ibb.co/qLHMB56Z/2x.png",
+      "https://i.ibb.co/zhSyT5VC/2x.png",
+      "https://i.ibb.co/0N7Pjp2/2x.png",
+      "https://i.ibb.co/8nhGCtcw/2x.png",
+      "https://i.ibb.co/dJ74TVZ7/2x.png"
+    ],
+    "description": "新一代智慧医疗临床工作站，优化医生接诊路径，实现结构化病历与智能辅助诊断。",
+    "details": "### 项目概述\n\n祎泰健康管理平台旨在解决传统电子病历系统繁琐、录入效率低下的痛点。通过深度用户调研与临床工作流重构，大幅减少医生日常重复录入时间。\n\n### 设计亮点\n\n- **高效临床工作流**：卡片式模块化病历编辑，关键体征与检查检验结果一目了然。\n- **无障碍适老化与人性化**：严格遵循医疗行业无障碍设计标准，确保急重症场景下的高容错率与清晰辨识度。",
+    "tags": [
+      "Sketch",
+      "医疗健康",
+      "B端设计",
+      "工作流重构"
+    ],
+    "layout": "right-bottom"
+  },
+  {
+    "id": "4",
+    "title": "111人生健康",
+    "category": "Fintech / B端金融看板",
+    "images": [
+      "https://i.ibb.co/wNQFqpCF/image.png"
+    ],
+    "detailImages": [
+      "https://i.ibb.co/Tj8mXyW/image.png",
+      "https://i.ibb.co/YTkWXN9g/image.png",
+      "https://i.ibb.co/gFWMfV1D/image.png",
+      "https://i.ibb.co/Q3F47vq4/AI.png",
+      "https://i.ibb.co/mrr1nVTv/image.png"
+    ],
+    "description": "面向机构投资者的多资产穿透式管理与风控预警大盘，提供毫秒级数据图表分析。",
+    "details": "### 项目概述\n\n111人生健康是一款面向专业机构投资者的新一代智能金融资产管理大盘系统. 系统集成了多资产穿透分析、智能风控预警、实时行情图表以及定制化报表导出功能。\n\n### 设计亮点\n\n- **极致信息密度**：在保证视觉呼吸感的同时，科学规划高密度金融数据表格与多维图表看板。\n- **暗色专业交易模式**：采用高对比度的专业交易深色主题，有效缓解长时间盯盘的视觉疲劳。",
+    "tags": [
+      "移动端app",
+      "AI 健康",
+      "mastergo",
+      "Health"
+    ],
+    "layout": "right-report"
+  },
+  {
+    "id": "6",
+    "title": "蚂蚁快传",
+    "category": "移动端工具 & 网页设计",
+    "images": [
+      "https://i.ibb.co/ccrFwFv7/image.png"
+    ],
+    "detailImages": [
+      "https://i.ibb.co/B5V1yZ6s/H5.png",
+      "https://i.ibb.co/nNFzgTkJ/Tab1.png",
+      "https://i.ibb.co/99nsSbMy/Tab3.png",
+      "https://i.ibb.co/ycWcN6NY/Tab4-1.png",
+      "https://i.ibb.co/sXK0GH2/image.png",
+      "https://i.ibb.co/7xqJ3ZbW/1.png",
+      "https://i.ibb.co/x8dsw1tH/image.png"
+    ],
+    "description": "一款兼顾文件传输工具网页端、全功能客户端的轻量文件分享产品",
+    "details": "### 项目概述\n\n蚂蚁快传 是面向个人、办公场景的口令式文件快传客户端，支持大文件、多格式文档跨设备临时分享。\n整体采用明亮简约黄黑品牌视觉，功能分层清晰，无需好友配对，依靠提取码实现快速收发文件，适配手机本地互传、远程文件分发场景。\n\n### 设计亮点\n\n- **双流程分层页面**：\n区分访客下载引导页、核心操作主页；新用户落地轻量化引导页，老用户直接进入提取 / 发送功能首页，降低使用门槛。\n\n- **四大核心功能模块化导航**：\n底部固定「提取, 发送, 下载, 我的」导航栏，文件提取记录可视化留存，单条记录展示文件名, 提取码, 存储时间, 支持单条删除管理。\n\n- **轻量化无门槛交互**：\n仅靠一串提取码即可完成文件接收，无需注册登录；多类型文件搭配专属图标，快速区分文件夹、Word、PDF、表格等资源。",
+    "tags": [
+      "Figma",
+      "网页 Web",
+      "移动端 App",
+      "东方极简美学",
+      "UI/UX"
+    ],
+    "layout": "mixed"
+  }
+]

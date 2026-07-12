@@ -954,7 +954,13 @@ export default function App() {
 
   const fetchProjects = async () => {
     try {
-      const res = await fetch("/api/projects");
+      const saved = localStorage.getItem("custom_projects");
+      if (saved) {
+        setProjects(JSON.parse(saved));
+        setLoading(false);
+        return;
+      }
+      const res = await fetch("/projects.json");
       const data = await res.json();
       // Map images to the correct format if they are strings
       const formattedData = data.map((p: any) => ({
@@ -975,54 +981,40 @@ export default function App() {
   }, []);
 
   const handleSaveProject = async (project: Partial<Project>, files?: FileList) => {
-    const formData = new FormData();
-    Object.entries(project).forEach(([key, value]) => {
-      if (key === 'tags' && Array.isArray(value)) {
-        formData.append(key, value.join(','));
-      } else if (key === 'images' && Array.isArray(value)) {
-        // If we have existing images and NO new files, keep them
-        if (!files || files.length === 0) {
-          value.forEach(img => formData.append('images', img));
-        }
-      } else if (key === 'detailImages' && Array.isArray(value)) {
-        value.forEach(img => formData.append('detailImages', img));
-      } else if (value !== undefined) {
-        formData.append(key, value as string);
-      }
-    });
+    const processFiles = async (): Promise<string[]> => {
+      if (!files || files.length === 0) return project.images || [];
+      return Array.from(files).map(file => URL.createObjectURL(file));
+    };
 
-    if (files) {
-      Array.from(files).forEach(file => {
-        formData.append('images', file);
-      });
+    const newImages = await processFiles();
+    const updatedProject: Project = {
+      id: project.id || String(Date.now()),
+      title: project.title || "",
+      category: project.category || "",
+      description: project.description || "",
+      details: project.details || "",
+      images: newImages.length > 0 ? newImages : (project.images || []),
+      detailImages: project.detailImages || [],
+      tags: project.tags || [],
+      link: project.link || "",
+      layout: project.layout || ""
+    };
+
+    let updatedProjects: Project[];
+    if (project.id) {
+      updatedProjects = projects.map(p => p.id === project.id ? updatedProject : p);
+    } else {
+      updatedProjects = [updatedProject, ...projects];
     }
-
-    const url = project.id ? `/api/projects/${project.id}` : "/api/projects";
-    const method = project.id ? "PUT" : "POST";
-
-    try {
-      const res = await fetch(url, {
-        method,
-        body: formData
-      });
-      if (res.ok) {
-        fetchProjects();
-      }
-    } catch (err) {
-      console.error("Failed to save project:", err);
-    }
+    setProjects(updatedProjects);
+    localStorage.setItem("custom_projects", JSON.stringify(updatedProjects));
   };
 
   const handleDeleteProject = async (id: string) => {
     if (!confirm("确定要删除这个作品吗？")) return;
-    try {
-      const res = await fetch(`/api/projects/${id}`, { method: "DELETE" });
-      if (res.ok) {
-        fetchProjects();
-      }
-    } catch (err) {
-      console.error("Failed to delete project:", err);
-    }
+    const updatedProjects = projects.filter(p => p.id !== id);
+    setProjects(updatedProjects);
+    localStorage.setItem("custom_projects", JSON.stringify(updatedProjects));
   };
 
   if (loading) {

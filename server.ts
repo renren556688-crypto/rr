@@ -8,8 +8,8 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const PROJECTS_FILE = path.join(__dirname, "projects.json");
-const UPLOADS_DIR = path.join(__dirname, "public", "uploads");
+const PROJECTS_FILE = path.join(process.cwd(), "projects.json");
+const UPLOADS_DIR = path.join(process.cwd(), "public", "uploads");
 
 // Ensure uploads directory exists
 if (!fs.existsSync(UPLOADS_DIR)) {
@@ -135,6 +135,8 @@ async function startServer() {
     const urls = files.map(f => `/uploads/${f.filename}`);
     res.json({ urls });
   });
+
+  app.use("/uploads", express.static(UPLOADS_DIR));
 
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {

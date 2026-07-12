@@ -196,7 +196,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <p className="text-lg md:text-xl font-medium mb-6 tracking-tight">
-            你好，我是 任利颖！！
+            你好，我是 任利颖
           </p>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-widest leading-[1.2] mb-8 bg-gradient-to-b from-gray-300 to-white bg-clip-text text-transparent">
